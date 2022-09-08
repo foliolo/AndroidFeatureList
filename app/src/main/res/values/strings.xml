@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidFeatureList</string>
+    <string name="title_feature_list">Feature List</string>
+</resources>
