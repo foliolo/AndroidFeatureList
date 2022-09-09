@@ -11,4 +11,10 @@
         android:label="@string/title_feature_list"
         tools:layout="@layout/fragment_feature_list" />
 
+    <fragment
+        android:id="@+id/notificationPermissionFragment"
+        android:name="com.ahgitdevelopment.androidfeaturelist.ui.notificationpermission.NotificationPermissionFragment"
+        android:label="@string/title_notification_permission"
+        tools:layout="@layout/fragment_notification_permission" />
+
 </navigation>
