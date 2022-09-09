@@ -25,11 +25,14 @@ class CustomNotification(
     private val channelDescription: String = "channel_description",
 ) {
 
+    init {
+        createNotificationChannel()
+    }
+
     var builder: NotificationCompat.Builder? = null
 
     fun buildNotification(): Notification {
 
-        createNotificationChannel()
         val pendingIntent = createPendingIntent()
 
         return NotificationCompat.Builder(context, channelId)

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.ahgitdevelopment.androidfeaturelist">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,8 +18,8 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_feature_list"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/title_feature_list">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
