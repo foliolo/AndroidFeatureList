@@ -8,14 +8,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.ahgitdevelopment.androidfeaturelist.BaseFragment
 import com.ahgitdevelopment.androidfeaturelist.databinding.FragmentNotificationPermissionBinding
 import com.ahgitdevelopment.androidfeaturelist.extensions.logD
@@ -60,14 +58,6 @@ class NotificationPermissionFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        requireActivity().onBackPressedDispatcher.addCallback(
-            viewLifecycleOwner,
-            object : OnBackPressedCallback(false) {
-                override fun handleOnBackPressed() {
-                    findNavController().navigateUp()
-                }
-            })
 
         customNotification = CustomNotification(requireContext())
 
