@@ -11,12 +11,14 @@ class FeatureListViewModel : ViewModel() {
     init {
         _featureList.postValue(
             arrayListOf(
-                FeatureType.NOTIFICATION_PERMISSION_ANDROID_13
+                FeatureType.NOTIFICATION_PERMISSION_ANDROID_13,
+                FeatureType.SERVICE
             )
         )
     }
 
     enum class FeatureType(val value: String) {
-        NOTIFICATION_PERMISSION_ANDROID_13("Notification permissions on Android 13")
+        NOTIFICATION_PERMISSION_ANDROID_13("Notification permissions on Android 13"),
+        SERVICE("Service")
     }
 }

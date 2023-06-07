@@ -11,6 +11,7 @@ import com.ahgitdevelopment.androidfeaturelist.BaseFragment
 import com.ahgitdevelopment.androidfeaturelist.R
 import com.ahgitdevelopment.androidfeaturelist.databinding.FragmentFeatureListBinding
 import com.ahgitdevelopment.androidfeaturelist.ui.featurelist.FeatureListViewModel.FeatureType.NOTIFICATION_PERMISSION_ANDROID_13
+import com.ahgitdevelopment.androidfeaturelist.ui.featurelist.FeatureListViewModel.FeatureType.SERVICE
 
 class FeatureListFragment : BaseFragment() {
 
@@ -35,6 +36,10 @@ class FeatureListFragment : BaseFragment() {
                     when (featureType) {
                         NOTIFICATION_PERMISSION_ANDROID_13 -> {
                             findNavController().navigate(R.id.notificationPermissionFragment)
+                        }
+
+                        SERVICE -> {
+                            findNavController().navigate(R.id.serviceFragment)
                         }
                     }
                 }
